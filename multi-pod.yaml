@@ -1,0 +1,15 @@
+#Create Multi container pod
+
+api Version: v1
+kind: pod
+metadata: 
+  name: multi-pod-fail
+spec:
+  -name:c1
+   image: nginx
+   ports:
+   - containerPort: 80
+  -name:c2
+    image: nginx
+    ports:
+    - containerPort: 80
